@@ -19,3 +19,9 @@ download the keras model here: https://drive.google.com/open?id=1PZ_6Zsy1Vb0s0Jm
 3.  Install the Requirements
 
         pip install -r requirements.txt
+
+# License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This project is licensed under the [MIT License](https://github.com/SiddhantNair/whats_his_face/blob/master/LICENSE) for public use.
