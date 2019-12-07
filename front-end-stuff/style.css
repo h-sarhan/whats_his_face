@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin    : 0;
+  padding   : 0;
+}
+
+
+body {
+  background : linear-gradient(to right, #8e2de2, #4a00e0);
+  font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background :
+    linear-gradient(135deg, #8e2de2 21px, #4a00e0 22px, #4a00e0 24px, transparent 24px, transparent 67px, #4a00e0 67px, #4a00e0 69px, transparent 69px),
+    linear-gradient(225deg, #8e2de2 21px, #4a00e0 22px, #4a00e0 24px, transparent 24px, transparent 67px, #4a00e0 67px, #4a00e0 69px, transparent 69px)0 64px;
+  background-color: #8e2de2;
+  background-size : 64px 128px;
+
+}
+
+.app-container {
+  display        : flex;
+  align-content  : center;
+  flex-direction : column;
+  justify-content: center;
+  height         : 100vh;
+  align-items    : center;
+}
+
+.title {
+  align-self    : center;
+  justify-self  : flex-start;
+  font-size     : 2.5rem;
+  text-transform: uppercase;
+  color         : #00C690;
+}
+
+.webcam.stop {
+  background-image   : url('https://cdn3.iconfinder.com/data/icons/computer-system-and-data/512/24-512.png');
+  background-size    : contain;
+  background-repeat  : no-repeat;
+  height             : 360px;
+  width              : 640px;
+  background-position: center;
+  transform          : scale(0.8);
+}
+
+.btn-container {
+  display: flex;
+}
+
+.start-stop,
+.upload {
+  padding      : 1rem;
+  border       : none;
+  border-radius: 5px;
+  color        : white;
+  cursor       : pointer;
+  margin       : 1rem;
+
+}
+
+a.start {
+  background-color: #27ae60;
+}
+
+a.stop {
+  background-color: #e74c3c;
+}
+
+.stream.start {
+  display: block;
+}
+
+.stream.stop {
+  display: none;
+}
+
+.stream {
+  display: none;
+}
+
+.upload-btn {
+  background-color: #f1c40f;
+}
