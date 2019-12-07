@@ -4,7 +4,7 @@
 [![Generic badge](https://img.shields.io/pypi/pyversions/Django)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/Version-1.0.0-green.svg)](https://shields.io/)
 
-download the keras model here: https://drive.google.com/open?id=1PZ_6Zsy1Vb0s0JmjEmVd8FS99zoMCiN1
+download the keras model here: [url to download](https://drive.google.com/open?id=1PZ_6Zsy1Vb0s0JmjEmVd8FS99zoMCiN1)
 
 
 1.  Create a python environment inside the project folder
