@@ -1,6 +1,4 @@
 /venv
-/static/img/predictions
-/static/img/uploads
 /train_imgs
 /__pycache__
 .deployment
