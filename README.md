@@ -18,7 +18,7 @@ Currently, the model is trained on a couple of celebrity faces (and me)
 
 
 
-# Steps to run app
+# Steps to run app and contribute
 
 1.  Create a python environment inside the project folder
 
