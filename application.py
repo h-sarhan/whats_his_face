@@ -9,6 +9,7 @@ from predict import image_predict
 app = Flask(__name__)
 app.config["IMAGE_UPLOADS"] = "./static/img/uploads"
 no_img = 'no_img'
+MYDIR = os.path.dirname(__file__)
 @app.route("/")
 def home():
     return render_template("home.html")
@@ -18,7 +19,7 @@ def upload_image():
   if request.method == "POST":
     if request.files:
       image = request.files["image"]
-      image.save(os.path.join(app.config["IMAGE_UPLOADS"], image.filename))
+      image.save(os.path.join(MYDIR + "/" + app.config["IMAGE_UPLOADS"], image.filename))
       print(image.filename)
       print("Image saved")
       image_prediction = image_predict(image.filename)
