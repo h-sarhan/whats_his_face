@@ -3,3 +3,6 @@
 /static/img/uploads
 /train_imgs
 /__pycache__
+.deployment
+.vscode/settings.json
+.vscode/settings.json
