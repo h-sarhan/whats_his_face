@@ -7,6 +7,7 @@ import cv2
 import os
 
 detector = MTCNN()
+
 model = tf.keras.models.load_model('./models/model.h5')
 resnet = InceptionResnetV1(pretrained='vggface2').eval()
 # img = cv2.imread('train_imgs/siddhant_nair/IMG_0846.jpg')
@@ -70,7 +71,7 @@ def image_predict(imageName):
             a = model.predict([[embedding]])
             num = max(a[0][0].tolist())
             font = cv2.FONT_HERSHEY_SIMPLEX
-            if num > 0.98:
+            if num > 0.8:
                 cv2.putText(image, f'{prediction} {round(num, 2)}%', (x, y - 10), font,
                             0.5, (0, 255, 0), 1, cv2.LINE_AA)
                 cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 3)

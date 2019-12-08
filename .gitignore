@@ -1,5 +1,5 @@
 /venv
-/app/static/img/predictions
-/app/static/img/uploads
+/static/img/predictions
+/static/img/uploads
 /train_imgs
-/app/__pycache__
+/__pycache__
