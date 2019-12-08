@@ -1,2 +1,4 @@
 /venv
+/app/static/img/predictions
+/app/static/img/uploads
 /train_imgs

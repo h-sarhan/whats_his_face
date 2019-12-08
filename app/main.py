@@ -1,8 +1,14 @@
 from flask import Flask, request, redirect, render_template
+import numpy as np
+import tensorflow as tf
+import cv2
+from mtcnn import MTCNN
 import os
-app = Flask(__name__)
-app.config["IMAGE_UPLOADS"] = "/mnt/c/Users/hasou/computer-science/Hackathon/whats_his_face/app/static/img/uploads"
+from predict import image_predict
 
+app = Flask(__name__)
+app.config["IMAGE_UPLOADS"] = "./static/img/uploads"
+no_img = 'no_img'
 @app.route("/")
 def home():
     return render_template("home.html")
@@ -13,9 +19,14 @@ def upload_image():
     if request.files:
       image = request.files["image"]
       image.save(os.path.join(app.config["IMAGE_UPLOADS"], image.filename))
+      print(image.filename)
       print("Image saved")
-      return redirect(request.url)
+      image_prediction = image_predict(image.filename)
+      no_img = ''
+      return render_template('home.html', image_prediction=f'{image_prediction}')
   return render_template("home.html")
+
+
 
 if __name__ == "__main__":
   app.run(debug=True)
