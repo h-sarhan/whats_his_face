@@ -7,7 +7,7 @@ import os
 from predict import image_predict
 
 app = Flask(__name__)
-app.config["IMAGE_UPLOADS"] = "./static/img/uploads"
+app.config["IMAGE_UPLOADS"] = "static/img/uploads"
 no_img = 'no_img'
 MYDIR = os.path.dirname(__file__)
 @app.route("/")

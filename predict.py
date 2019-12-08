@@ -7,8 +7,9 @@ import cv2
 import os
 
 detector = MTCNN()
+MYDIR = os.path.dirname(__file__)
 
-model = tf.keras.models.load_model('./models/model.h5')
+model = tf.keras.models.load_model(MYDIR + '/models/model.h5')
 resnet = InceptionResnetV1(pretrained='vggface2').eval()
 # img = cv2.imread('train_imgs/siddhant_nair/IMG_0846.jpg')
 names = ['ben_afflek', 'elton_john', 'hassan', 'jerry_seinfeld', 'madonna', 'mindy_kaling']
@@ -51,7 +52,7 @@ def video_test():
             break
 
 def image_predict(imageName):
-    img = cv2.cvtColor(cv2.imread(f'./static/img/uploads/{imageName}'), cv2.COLOR_BGR2RGB)
+    img = cv2.cvtColor(cv2.imread(f'{MYDIR}/static/img/uploads/{imageName}'), cv2.COLOR_BGR2RGB)
     image = cv2.resize(img, (640, 360))
     faces = detector.detect_faces(image)
     print(faces)
@@ -80,8 +81,8 @@ def image_predict(imageName):
                             0.5, (0, 0, 255), 1, cv2.LINE_AA)
                 cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 3)
     output_img = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
-    cv2.imwrite(f'./static/img/predictions/{imageName}.jpg', output_img)
-    return f'./static/img/predictions/{imageName}.jpg'
+    cv2.imwrite(f'{MYDIR}/static/img/predictions/{imageName}.jpg', output_img)
+    return f'{MYDIR}/static/img/predictions/{imageName}.jpg'
 
 
 if __name__ == "__main__":
