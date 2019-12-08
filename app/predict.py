@@ -7,7 +7,7 @@ import cv2
 import os
 
 detector = MTCNN()
-model = tf.keras.models.load_model('models/model.h5')
+model = tf.keras.models.load_model('./models/model.h5')
 resnet = InceptionResnetV1(pretrained='vggface2').eval()
 # img = cv2.imread('train_imgs/siddhant_nair/IMG_0846.jpg')
 names = ['ben_afflek', 'elton_john', 'hassan', 'jerry_seinfeld', 'madonna', 'mindy_kaling']
