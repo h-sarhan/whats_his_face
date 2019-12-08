@@ -24,18 +24,22 @@ for folder in os.listdir('train_imgs'):
             if not os.path.isdir(filepath + '/' + file_item):
                 image = cv2.imread(filepath + '/' + file_item)
                 if not image is None:
-                    x, y, w, h = detector.detect_faces(image)[0]['box']
+                    faces = detector.detect_faces(image)
+                    if len(faces) == 0:
+                        continue
+                    x, y, w, h =  faces[0]['box']
                     face = image[y:y + h, x:x + w]
-                    face = cv2.resize(face, (160, 160))
-                    face = face.transpose(2, 0, 1).astype(np.float32)
+                    if face.size > 0:
+                        face = cv2.resize(face, (160, 160))
+                        face = face.transpose(2, 0, 1).astype(np.float32)
 
-                    mean, std = face.mean(), face.std()
-                    face = (face - mean) / std
-                    face = torch.from_numpy(np.expand_dims(face, axis=0))
+                        mean, std = face.mean(), face.std()
+                        face = (face - mean) / std
+                        face = torch.from_numpy(np.expand_dims(face, axis=0))
 
-                    embedding = resnet(face).cpu().detach().numpy()
-                    embeddings.append(embedding)
-                    names.append([folder])
+                        embedding = resnet(face).cpu().detach().numpy()
+                        embeddings.append(embedding)
+                        names.append([folder])
 
 print('training image face classifier')
 print(names_labels)
