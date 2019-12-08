@@ -32,5 +32,11 @@
     ".vscode{,/**}"
   ],
   "appService.defaultWebAppToDeploy": "/subscriptions/7e6bfc96-e3e8-4408-a432-c8a32f9c0c86/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/whats-his-face",
-  "appService.deploySubpath": ""
+  "appService.deploySubpath": "",
+  "azureFunctions.deploySubpath": ".",
+  "azureFunctions.scmDoBuildDuringDeployment": true,
+  "azureFunctions.pythonVenv": ".venv",
+  "azureFunctions.projectLanguage": "Python",
+  "azureFunctions.projectRuntime": "~2",
+  "debug.internalConsoleOptions": "neverOpen"
 }

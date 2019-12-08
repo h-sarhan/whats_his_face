@@ -6,3 +6,11 @@
 .deployment
 .vscode/settings.json
 .vscode/settings.json
+/whats-his-face-azure-func
+.python_packages
+.venv
+proxies.json
+local.settings.json
+host.json
+.funcignore
+.vscode/settings.json
