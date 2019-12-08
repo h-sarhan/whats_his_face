@@ -2,3 +2,4 @@
 /app/static/img/predictions
 /app/static/img/uploads
 /train_imgs
+/app/__pycache__
