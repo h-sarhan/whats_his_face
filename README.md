@@ -1,11 +1,24 @@
 # whats_his_face
- Neural Network based face recognition with the facenet algorithm
- 
+
+ Neural network based face recognition web app.
+
+Currently, the model is trained on a couple of celebrity faces (and me)
+
 [![Generic badge](https://img.shields.io/pypi/pyversions/Django)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/Version-1.0.0-green.svg)](https://shields.io/)
 
-download the keras model here: [url to download](https://drive.google.com/open?id=1PZ_6Zsy1Vb0s0JmjEmVd8FS99zoMCiN1)
 
+
+# Tech Stack
+
+* Tensorflow
+* OpenCV
+* pyTorch
+* Flask
+
+
+
+# Steps to run app
 
 1.  Create a python environment inside the project folder
 
@@ -20,17 +33,27 @@ download the keras model here: [url to download](https://drive.google.com/open?i
 
         pip install -r requirements.txt
 
-4.  Place the dataset images in custom folders inside another folder called train_imgs
+4.  Start the flask server
 
-        ./train_imgs/{name_here}/{a_min_of_5_images_recommended}
-        
-5.  Train the model by using this command
+        gunicorn application:app
+    
+5.  In your web browser go to:
 
-        python train.py
+        http://127.0.0.1:8000
 
-6.  Run the model by using this command
+6.  Upload pictures of Madonna, Ben Affleck, Elton John, Jerry Seinfeld, or Mindy Kaling and click submit
 
-        python main.py
+# Next Steps
+
+1. Get deployment to work
+2. Convert project to a Tensorflow.js/node app 
+3. Train on larger dataset
+4. Make a nicer UI
+5. Add the ability to train on custom data from the user
+6. Implement face recognition in real time using (don't even know if this is possible)
+
+
+
 # License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
