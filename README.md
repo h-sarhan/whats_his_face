@@ -1,6 +1,6 @@
 # whats_his_face
 
- Neural network based face recognition web app.
+Neural network based face recognition web app.
 
 Currently, the model is trained on a couple of celebrity faces (and me)
 
@@ -16,9 +16,12 @@ Currently, the model is trained on a couple of celebrity faces (and me)
 * pyTorch
 * Flask
 
+# Try it out
+
+I have deployed the app on (heroku)[https://whats-his-face-v1.herokuapp.com/]. 
 
 
-# Steps to run app and contribute
+# Steps to run app locally and contribute
 
 1.  Create a python environment inside the project folder
 
