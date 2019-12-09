@@ -82,7 +82,7 @@ def image_predict(imageName):
                 cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 3)
     output_img = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
     cv2.imwrite(f'{MYDIR}/static/img/predictions/{imageName}', output_img)
-    return f'{MYDIR}/static/img/predictions/{imageName}'
+    return f'/static/img/predictions/{imageName}'
 
 
 if __name__ == "__main__":
