@@ -1,11 +1,8 @@
 /venv
 /train_imgs
 /__pycache__
-/.vscode
+.vscode
 .deployment
-.vscode/settings.json
-.vscode/settings.json
-/whats-his-face-azure-func
 .python_packages
 .venv
 proxies.json
