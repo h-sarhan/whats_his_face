@@ -1,6 +1,7 @@
 /venv
 /train_imgs
 /__pycache__
+/.vscode
 .deployment
 .vscode/settings.json
 .vscode/settings.json
