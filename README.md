@@ -48,12 +48,11 @@ I have deployed the app on [heroku](https://whats-his-face-v1.herokuapp.com/).
 
 # Next Steps
 
-1. Get deployment to work
-2. Convert project to a Tensorflow.js/node app 
-3. Train on larger dataset
-4. Make a nicer UI
-5. Add the ability to train on custom data from the user
-6. Implement face recognition in real time using (don't even know if this is possible)
+1. Convert project to a Tensorflow.js/node app 
+2. Train on larger dataset
+3. Make a nicer UI
+4. Add the ability to train on custom data from the user
+5. Implement face recognition in real time using a webcam (don't even know if this is possible)
 
 
 
