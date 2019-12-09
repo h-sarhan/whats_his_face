@@ -18,7 +18,7 @@ Currently, the model is trained on a couple of celebrity faces (and me)
 
 # Try it out
 
-I have deployed the app on (heroku)[https://whats-his-face-v1.herokuapp.com/]. 
+I have deployed the app on [heroku](https://whats-his-face-v1.herokuapp.com/). 
 
 
 # Steps to run app locally and contribute
